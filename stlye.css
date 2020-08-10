@@ -6,9 +6,22 @@ a{
     text-decoration: none;
     color: white;
 }
+@font-face {
+    font-family: 'Arial';
+    src: url('font/ArialMT.eot');
+    src: url('font/ArialMT.eot?#iefix') format('embedded-opentype'),
+    url('font/ArialMT.woff2') format('woff2'),
+    url('font/ArialMT.woff') format('woff'),
+    url('font/ArialMT.ttf') format('truetype'),
+    url('font/ArialMT.svg#ArialMT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 .header-container{
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
     background: linear-gradient(135deg, #570161, #23155f 60%, #1c0e5b);
     align-items: center;
 }
@@ -24,6 +37,9 @@ a{
     list-style: none;
     margin: 0 15px;
     padding: 25px 0;
+}
+.nav-title > a{
+    font-family: Arial, sans-serif;
 }
 .fas{
     vertical-align: middle;
@@ -72,7 +88,7 @@ a{
     fill: white;
 }
 .left-text{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
@@ -81,6 +97,7 @@ a{
     letter-spacing: 0.055em;
 }
 .left-text > a{
+    font-family: Arial, sans-serif;
     color: rgba(255, 255, 255, 0.55);
 }
 .container{
@@ -90,7 +107,7 @@ a{
     width: 90%;
 }
 .main-title{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
@@ -115,7 +132,7 @@ a{
     min-width: 80px;
 }
 .main-sub-subtitle{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -125,7 +142,7 @@ a{
     margin: 2px 20px;
 }
 .main-sub-subtitle2{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -135,7 +152,7 @@ a{
     margin: 2px 20px;
 }
 .main-sub{
-    margin: 20px 20px;
+    margin: 15px 20px;
 
 }
 .inp{
@@ -169,7 +186,7 @@ a{
     flex-wrap: wrap;
 }
 .main-sub-text{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -187,7 +204,7 @@ a{
     border-radius: 35px;
     margin: 5px 15px;
     background: white;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -202,9 +219,8 @@ a{
 }
 .form-container{
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px 15px;
-    width: 90%;
+    padding: 12px 15px;
+    width: 95%;
     margin: 0 auto;
     background: #FFFFFF;
     box-shadow: 0 0 47px rgba(0, 0, 0, 0.1);
@@ -222,8 +238,8 @@ a{
 
 }
 .pages{
-    width: 59px;
-    height: 56px;
+    width: 55px;
+    height: 55px;
     background: #4200CF;
     border-radius: 7px;
     transform: rotate(45deg);
@@ -235,7 +251,7 @@ a{
     position: absolute;
     top: 14px;
     left: 20px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 25px;
@@ -245,7 +261,7 @@ a{
     transform: rotate(-45deg);
 }
 .register-text{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -259,22 +275,22 @@ a{
     background: #FFFFFF;
     box-shadow: 0 0 47px rgba(0, 0, 0, 0.1);
     border-radius: 45px;
-    border: 0 solid;
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 30px;
+    border: 1px solid #a6a6a6;
 }
 .register-inp{
     outline: none;
     background: #FFFFFF;
     box-shadow: 0 0 47px rgba(0, 0, 0, 0.1);
     border-radius: 45px;
-    border: 0 solid;
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 100px;
+    border: 1px solid #a6a6a6;
 }
 .register-inp-box1{
     margin: 5px 10px;
@@ -311,13 +327,14 @@ a{
 }
 .reg-img > img{
     width: 75%;
+    min-width: 360px;
 }
 .form-sub{
     margin: 0 auto;
     width: 70%;
 }
 .forward{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -328,4 +345,38 @@ a{
     border-radius: 96px;
     padding: 10px 40px;
     border: 1px solid;
+}
+@media all and (max-width: 960px){
+    .form-container{
+        flex-wrap: wrap;
+        width: min-content;
+        padding: 20px 15px;
+    }
+    .reg{
+        width: 100%;
+    }
+    .main-sub{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .form{
+        margin: 0 auto;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+    .register-inp-box1 {
+        margin: 0 auto;
+    }
+    .main-sub-subtitle2{
+        padding: 10px 10px;
+    }
+    .page-svg{
+        display: none;
+    }
+}
+@media all and (max-width: 793px){
+    .register-inp-box-sub{
+        margin:  0 auto;
+        padding: 10px;
+    }
 }
