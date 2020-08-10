@@ -124,6 +124,8 @@ a{
 }
 .container{
     display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 .main-container{
     width: 90%;
@@ -293,51 +295,53 @@ a{
     margin: 7px 0;
 }
 .register-inp1{
+    transition: all 1s;
     outline: none;
     background: #FFFFFF;
     box-shadow: 0 0 47px rgba(0, 0, 0, 0.1);
     border-radius: 45px;
-    padding-left: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 30px;
+    width: 222px;
+    height: 45px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
     border: 1px solid #a6a6a6;
+}
+.register-inp-box1{
+    margin: 5px;
+}
+.register-inp-box{
+    margin: 5px;
+}
+.register-inp1:focus{
+    transition: all 1s;
+    border: double 1px transparent;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left,  #ff592b, #da5ab5 20%, #da5ab5,#2cfff2);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 .register-inp{
     outline: none;
     background: #FFFFFF;
     box-shadow: 0 0 47px rgba(0, 0, 0, 0.1);
     border-radius: 45px;
-    padding-left: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 100px;
+    width: 255px;
+    height: 45px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
     border: 1px solid #a6a6a6;
 }
-.register-inp-box1{
-    margin: 5px 10px;
-    border: double 2px transparent;
-    border-radius: 80px;
-}
-.register-inp-box1:hover{
-    border: double 2px transparent;
-    background-image: linear-gradient(white, white), radial-gradient(circle at top left,  #ff592b, #da5ab5 20%, #da5ab5,#2cfff2);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    margin: 0 10px;
-}
-.register-inp-box{
-    border: double 2px transparent;
-    border-radius: 80px;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
-.register-inp-box:hover{
-    border: double 2px transparent;
+.register-inp:focus{
+    transition: all 1s;
+    border: double 1px transparent;
     background-image: linear-gradient(white, white), radial-gradient(circle at top left,  #ff592b, #da5ab5 20%, #da5ab5,#2cfff2);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
+
 .reg{
     display: flex;
     width: 60%;
@@ -386,8 +390,15 @@ a{
         -ms-flex-direction: column;
         -webkit-flex-direction: column;
     }
+    .register-box{
+        margin: 0 10px;
+        width: 100%;
+    }
+    .register-inp{
+        width: 100%;
+    }
     .register-inp-box1 {
-        margin: 0 auto;
+        margin: 5px auto;
     }
     .main-sub-subtitle2{
         padding: 10px 10px;
